@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    int teamAScore = 0;
-    int teamAExtra = 0;
-    int teamAWicket = 0;
-    int teamAballs = 0;
+    int teamAScore;
+    int teamAExtra;
+    int teamAWicket;
+    int teamAballs;
 
-    int teamBScore = 0;
-    int teamBExtra = 0;
-    int teamBWicket = 0;
-    int teamBballs = 0;
+    int teamBScore;
+    int teamBExtra;
+    int teamBWicket;
+    int teamBballs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,21 @@ public class MainActivity extends AppCompatActivity {
         teamAScore += run;
         teamAballs += 1;
         updateTeamAScoreBord();
+    }
+
+    public void resetScore(View view) {
+        teamAScore = 0;
+        teamAExtra = 0;
+        teamAWicket = 0;
+        teamAballs = 0;
+
+        teamBScore = 0;
+        teamBExtra = 0;
+        teamBWicket = 0;
+        teamBballs = 0;
+
+        updateTeamAScoreBord();
+        updateTeamBScoreBord();
     }
 
     private void updateTeamAScoreBord() {
@@ -61,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
         wide_ball_check_box.setChecked(false);
 
-        CheckBox free_hit_check_box = (CheckBox)findViewById(R.id.team_a_no_ball);
+        CheckBox free_hit_check_box = (CheckBox)findViewById(R.id.team_a_free_hit);
         if (free_hit_check_box.isChecked()) {
             teamAballs -= 1;
         }
@@ -117,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         }
         wide_ball_check_box.setChecked(false);
 
-        CheckBox free_hit_check_box = (CheckBox)findViewById(R.id.team_b_no_ball);
+        CheckBox free_hit_check_box = (CheckBox)findViewById(R.id.team_b_free_hit);
         if (free_hit_check_box.isChecked()) {
             teamBballs -= 1;
         }

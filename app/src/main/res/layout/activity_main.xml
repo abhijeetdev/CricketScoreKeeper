@@ -8,6 +8,7 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/score_board"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -502,20 +503,14 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!--<Button-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_gravity="bottom|center_vertical|center"-->
-    <!--android:text="reset" />-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_vertical|center"
+        android:layout_marginTop="19dp"
+        android:onClick="resetScore"
+        android:text="reset" />
 
 </RelativeLayout>
-
-
-
-
-
-
-
-
